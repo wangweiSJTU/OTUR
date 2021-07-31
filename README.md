@@ -104,7 +104,7 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 
 ### (2) Results on real-world microscope images:
 
-** Visual comparison on real-world microscopy images, where the ground-truth is obtained by averaging over 50 realizations of each scene. The images are enlarged for clarity.**
+**Visual comparison on real-world microscopy images, where the ground-truth is obtained by averaging over 50 realizations of each scene. The images are enlarged for clarity.**
 
 ![alt text](images/micro.png )
 
