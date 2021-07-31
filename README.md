@@ -66,14 +66,19 @@ cd denoise_gaussian_rgb
 python train.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500" --sigma=30
 ```
 
+To train with the N2C method:
 
+```
+cd denoise_gaussian_rgb
+python train_n2c.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500"
+```
 
+To train with the N2N method:
 
-Moreover, for ease of use for interested readers who want to reproduce the result of our algorithm,
-and only for academic use purpose,
-we have copied here the blurred images from the following two datasets (see the 'BlurryImages' and 'Levin_data' folders):
-(1) R. Kohler, M. Hirsch, B. J. Mohler, B. Scholkopf, and S. Harmeling, “Recording and playback of camera shake: Benchmarking blind deconvolution with a real-world database,” in Proc. Eur. Conf. Comput. Vis., 2012, pp. 27–40.
-(2) A. Levin, Y. Weiss, F. Durand, and W. T. Freeman, “Understanding and evaluating blind deconvolution algorithms,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2009, pp. 1964–1971.
+```
+cd denoise_gaussian_rgb
+python train_n2n.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500"
+```
 
 By this, the results on these two datasets reported in the paper can be reproduced via directly running the 'demo_Levin.m' and ‘demo_eccv12.m’ files.
 
