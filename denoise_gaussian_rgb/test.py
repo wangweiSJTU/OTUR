@@ -15,7 +15,7 @@ parser.add_argument("--cuda", action="store_true", help="use cuda?")
 parser.add_argument("--model", default="./checkpoint/model_denoise_unet_n2c50200.pth", type=str, help="model path")
 parser.add_argument("--dataset", default="./KODAK", type=str, help="dataset name, Default: KODAK")
 parser.add_argument("--save", default="./results", type=str, help="savepath, Default: results")
-parser.add_argument("--noise_sigma", default=50, type=str, help="standard deviation of the Gaussian noise, Default: 25")
+parser.add_argument("--noise_sigma", default=50, type=int, help="standard deviation of the Gaussian noise, Default: 25")
 parser.add_argument("--gpus", default="0", type=str, help="gpu ids")
 
 def PSNR(pred, gt, shave_border=0):
