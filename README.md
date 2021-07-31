@@ -39,7 +39,7 @@ captured by a Kinect camera.
 ### Real-World Raw Depth Images
 
 As the Kinect camera only provides pre-processed images, we additionally consider a raw depth denoising experiment using another commercial ToF camera which provides raw depth data without any pre-processing. We collect 1,430 raw depth images using this camera as the noisy sample
-domain, which can be find at . For the clean target domain, we also randomly collect the same amount of patches from the SUNCG dataset.
+domain, which can be find at https://drive.google.com/file/d/14DcXk1mBW_RkgEYEb_eIhdoX78TjCtUk/view?usp=sharing. For the clean target domain, we also randomly collect the same amount of patches from the SUNCG dataset.
 
 All these datasets are only used for academic purpose.
 
