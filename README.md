@@ -91,27 +91,29 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 
 ## Some results
 
-### (1) Results of the brown Gaussian noise denoising on RGB images:
+### (1) Results on synthetic noisy images:
 
-**Quantitative evaluation results on the benchmark dataset of Kohler et al. (PSNR and SSIM comparison over 48 blurry images)**
+**Visual comparison on synthetic noisy images with brown Gaussian noise. The images are enlarged for clarity.**
 
-![alt text](images/brown_gaussian.png "Denoising comparison")
+![alt text](images/brown_gaussian.png )
 
-**Average PSNR and average SSIM on the dataset of Kohler et al.**
+**Quantitative comparison on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
 
-<img src="https://github.com/FWen/deblur-pmp/blob/master/results_eccv12/Kohler_PSNR_SSIM_table.png" width="300" />
+![alt text](images/rgb_denoise.png )
 
 
-### (2) Results on the dataset of Levin et al.:
+### (2) Results on real-world microscope images:
 
-**Quantitative evaluation results on the benchmark dataset of Levin et al. [2] (PSNR and SSIM comparison over 32 blurry images)**
+** Visual comparison on real-world microscopy images, where the ground-truth is obtained by averaging over 50 realizations of each scene. The images are enlarged for clarity.**
 
-<img src="https://github.com/FWen/deblur-pmp/blob/master/results_Levin/Levin_PSNR_SSIM.png?raw=true" width="500" />
+![alt text](images/micro.png )
 
-**Average PSNR and average SSIM on the dataset of Levin et al.:**
+**Quantitative comparison on real-world microscope images.:**
 
-<img src="https://github.com/FWen/deblur-pmp/blob/master/results_Levin/Levin_PSNR_SSIM_table.png?raw=true" width="300" />
+![alt text](images/micro_denoise.png )
 
-### (3) Computational complexity:
+### (3) Results on real-world raw depth images:
 
-<img src="https://github.com/FWen/deblur-pmp/blob/master/results_samples/comp/runtime.png" width="500" />
+**Visual comparison on a real-world raw depth image captured by a commercial ToF camera. The RGB image is only used as a reference of the scene, which is not aligned with the depth image. “OT denoising” denotes our model trained on synthetic depth images with Gaussian noise.**
+
+![alt text](images/raw.png )
