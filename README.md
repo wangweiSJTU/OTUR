@@ -80,23 +80,29 @@ cd denoise_gaussian_rgb
 python train_n2n.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500"
 ```
 
-By this, the results on these two datasets reported in the paper can be reproduced via directly running the 'demo_Levin.m' and ‘demo_eccv12.m’ files.
+### Validation using a trained network
 
+Take the synthetic Gaussian noise denoising on RGB images as an example, to run a validation dataset through a trained network:
 
-Meanwhile, some sample images form Pan are also used here, please see the 'sample_images' folder.
+```
+cd denoise_gaussian_rgb
+python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset="./KODAK" --save="./results" --noise_sigma=25 --gpu="0"
+```
 
-## (1) Results on the dataset of Kohler et al.:
+## Some results
+
+### (1) Results of the brown Gaussian noise denoising on RGB images:
 
 **Quantitative evaluation results on the benchmark dataset of Kohler et al. (PSNR and SSIM comparison over 48 blurry images)**
 
-<img src="https://github.com/FWen/deblur-pmp/blob/master/results_eccv12/Kohler_PSNR_SSIM.png" width="600" /> 
+![alt text](images/brown_gaussian.png "Denoising comparison")
 
 **Average PSNR and average SSIM on the dataset of Kohler et al.**
 
 <img src="https://github.com/FWen/deblur-pmp/blob/master/results_eccv12/Kohler_PSNR_SSIM_table.png" width="300" />
 
 
-## (2) Results on the dataset of Levin et al.:
+### (2) Results on the dataset of Levin et al.:
 
 **Quantitative evaluation results on the benchmark dataset of Levin et al. [2] (PSNR and SSIM comparison over 32 blurry images)**
 
@@ -106,6 +112,6 @@ Meanwhile, some sample images form Pan are also used here, please see the 'sampl
 
 <img src="https://github.com/FWen/deblur-pmp/blob/master/results_Levin/Levin_PSNR_SSIM_table.png?raw=true" width="300" />
 
-## (3) Computational complexity:
+### (3) Computational complexity:
 
 <img src="https://github.com/FWen/deblur-pmp/blob/master/results_samples/comp/runtime.png" width="500" />
