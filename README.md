@@ -1,4 +1,4 @@
-# Unsupervised Image Restoration Based on Optimal Transport
+% # Unsupervised Image Restoration Based on Optimal Transport
 
 This code is used to reproduce the results of the algortihm in the paper: 
 
