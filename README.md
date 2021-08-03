@@ -58,21 +58,21 @@ Take the synthetic Gaussian noise denoising on RGB images as an example, to trai
 
 ```
 cd denoise_gaussian_rgb
-python train.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500" --sigma=30
+python train.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500/" --sigma=30
 ```
 
 To train with the N2C method:
 
 ```
 cd denoise_gaussian_rgb
-python train_n2c.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500"
+python train_n2c.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500/"
 ```
 
 To train with the N2N method:
 
 ```
 cd denoise_gaussian_rgb
-python train_n2n.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500"
+python train_n2n.py --nEpochs=200 --noise_sigma=50 --gpus="0" --trainset="../../BSDS500/"
 ```
 
 ### Validation using a trained network
