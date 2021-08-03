@@ -1,9 +1,10 @@
-% # Unsupervised Image Restoration Based on Optimal Transport
+# OTUR
+<!-- # Unsupervised Image Restoration Based on Optimal Transport -->
 
-This code is used to reproduce the results of the algortihm in the paper: 
+<!-- This code is used to reproduce the results of the algortihm in the paper: 
 
 Wei Wang, Fei Wen, Zeyu Yan, Rendong Ying, and Peilin Liu, "Optimal Transport for Unsupervised Restoration
-Learning". 
+Learning".  -->
 
 The trained models are provided in the `./checkpoint` folder of each experiment. The proposed formulation is implemented in an adversarial training framework using [WGAN-gp](https://proceedings.neurips.cc/paper/2017/hash/892c3b1c6dccd52936e27cbd0ff683d6-Abstract.html). The generator is modified from part of [MPRNet](https://github.com/swz30/MPRNet) and the discriminator is modified from that of  [SRGAN](https://github.com/tensorlayer/srgan). We use them here only for academic use purpose.
 
