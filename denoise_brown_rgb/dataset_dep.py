@@ -1,6 +1,7 @@
 import torch.utils.data as data
 import torch,pdb
 import h5py
+import random
 
 class DatasetFromHdf5(data.Dataset):
     def __init__(self, file_path):
@@ -10,7 +11,8 @@ class DatasetFromHdf5(data.Dataset):
         self.label = hf.get("label")
 
     def __getitem__(self, index):
-        return torch.from_numpy(self.data[index,:,:,:]).float(), torch.from_numpy(self.label[index,:,:,:]).float()
+        r=random.randint(0,self.data.shape[0]-1)
+        return torch.from_numpy(self.data[index,:,:,:]).float(), torch.from_numpy(self.label[r,:,:,:]).float()
 
     def __len__(self):
         return self.data.shape[0]
