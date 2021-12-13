@@ -152,10 +152,11 @@ def train(training_data_loader, G_optimizer, D_optimizer, model, discr, criterio
 
     for iteration, batch in enumerate(training_data_loader, 1):
 
-        target = Variable(batch)
+        target = Variable(batch[1])
+        raw = Variable(batch[0])
         # rng_lambda = np.random.uniform(10, opt.noise_lambda, [1,1,1])
-        # input=np.random.poisson(rng_lambda*target.numpy())/rng_lambda
-        input=np.random.poisson(opt.noise_lambda*target.numpy())/opt.noise_lambda
+        # input=np.random.poisson(rng_lambda*raw.numpy())/rng_lambda
+        input=np.random.poisson(opt.noise_lambda*raw.numpy())/opt.noise_lambda
         input=torch.from_numpy(input).float()
         if opt.cuda:
             target = target.cuda()
