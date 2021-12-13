@@ -11,7 +11,7 @@ class DatasetFromHdf5(data.Dataset):
         self.label = hf.get("label")
 
     def __getitem__(self, index):
-        r=random.randint(0,self.data.shape[0]-1)
+        r=random.randint(0,self.label.shape[0]-1)
         return torch.from_numpy(self.data[index,:,:,:]).float(), torch.from_numpy(self.label[r,:,:,:]).float()
 
     def __len__(self):
