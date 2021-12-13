@@ -29,7 +29,7 @@ parser.add_argument("--pretrained", default="", type=str, help="Path to pretrain
 parser.add_argument("--vgg_loss", action="store_true", help="Use content loss?")
 parser.add_argument("--noise_sigma", default=50, type=int, help="standard deviation of the Gaussian noise (default: 50)")
 parser.add_argument("--gpus", default="0", type=str, help="gpu ids (default: 0)")
-parser.add_argument("--trainset", default="../../tr_depth32/", type=str, help="dataset name")
+parser.add_argument("--trainset", default="../tr_depth32/", type=str, help="dataset name")
 parser.add_argument("--sigma", default=30, type=int)
 def get_parameter_number(net):
     total_num = sum(p.numel() for p in net.parameters())
@@ -152,15 +152,17 @@ def train(training_data_loader, G_optimizer, D_optimizer, model, discr, criterio
 
     for iteration, batch in enumerate(training_data_loader, 1):
 
-        target = Variable(batch)
+        target = Variable(batch[1])
+        raw = Variable(batch[0])
         # rng_stddev = np.random.uniform(0.01, noise_max/255.0,[1,1,1])
         # noise = np.random.normal(size=target.shape) * rng_stddev
-        noise = np.random.normal(size=target.shape) * opt.noise_sigma/255.0   
+        noise = np.random.normal(size=raw.shape) * opt.noise_sigma/255.0   
         noise=torch.from_numpy(noise).float()
         if opt.cuda:
             target = target.cuda()
+            raw = raw.cuda()
             noise=noise.cuda()
-            input = target+noise
+            input = raw+noise
 
 
         # train discriminator D
