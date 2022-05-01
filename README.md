@@ -90,7 +90,7 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 
 ### (1) Results on synthetic noisy images:
 
-**Visual comparison on synthetic noisy images with brown Gaussian noise. The PSNR/PI/LPIPS results are provided in the brackets. The images are enlarged for clarity.**
+** Visual comparison on synthetic noisy images with different noise conditions. The PSNR/PI/LPIPS results are provided in the brackets. The images are enlarged for clarity.**
 
 ![alt text](images/brown_gaussian.png )
 
