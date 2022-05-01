@@ -1,4 +1,10 @@
-# OTUR
+# Optimal Transport for Unsupervised Denoising Learning - Official Pyorch implementation of the TPAMI 2022 paper_
+**Wei Wang*, **Fei Wen**, **Zeyu Yan**, **Peilin Liu**
+
+**Abstract**:
+_Recently, much progress has been made in unsupervised denoising learning. However, existing methods more or less rely on some assumptions on the signal and/or degradation model, which limits their practical performance. How to construct an optimal criterion for unsupervised denoising learning without any prior knowledge on the degradation model is still an open question. Toward answering this question, this work proposes a criterion for unsupervised denoising learning based on the optimal transport theory. This criterion has favorable properties, e.g., approximately maximal preservation of the information of the signal, whilst achieving perceptual reconstruction. Furthermore, though a relaxed unconstrained formulation is used in practical implementation, we prove that the relaxed formulation in theory has the same solution as the original constrained formulation. Experiments on synthetic and real-world data, including realistic photographic, microscopy, depth, and raw depth images, demonstrate that the proposed method even compares favorably with supervised methods, e.g., approaching the PSNR of supervised methods while having better perceptual quality. Particularly, for spatially correlated noise and realistic microscopy images, the proposed method not only achieves better perceptual
+quality but also has higher PSNR than supervised methods. Besides, it shows remarkable superiority in harsh practical conditions with complex noise, e.g., raw depth images._
+
 <!-- # Unsupervised Image Restoration Based on Optimal Transport -->
 
 <!-- This code is used to reproduce the results of the algortihm in the paper: 
