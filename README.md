@@ -89,18 +89,21 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 
 ### (1) Results on synthetic noisy images:
 
-**Visual comparison on synthetic noisy images with brown Gaussian noise. The images are enlarged for clarity.**
+**Visual comparison on synthetic noisy images with brown Gaussian noise. The PSNR/PI/LPIPS results are provided in the brackets. The images are enlarged for clarity.**
 
 ![alt text](images/brown_gaussian.png )
 
-**Quantitative comparison on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
+**Quantitative distortion comparison (PSNR/SSIM) on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
 
 ![alt text](images/rgb_denoise.png )
+**Quantitative perceptual quality comparison (PI/LPIPS) on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
+
+![alt text](images/rgb_denoise_pi.png )
 
 
 ### (2) Results on real-world microscope images:
 
-**Visual comparison on real-world microscopy images, where the ground-truth is obtained by averaging over 50 realizations of each scene. The images are enlarged for clarity.**
+**Visual comparison on real-world microscopy images, where the ground-truth is obtained by averaging over 50 realizations of each scene. The PSNR/PI/LPIPS results are provided in the brackets. The images are enlarged for clarity.**
 
 ![alt text](images/micro.png )
 
