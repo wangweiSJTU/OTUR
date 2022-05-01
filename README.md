@@ -96,6 +96,7 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 **Quantitative distortion comparison (PSNR/SSIM) on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
 
 ![alt text](images/rgb_denoise.png )
+
 **Quantitative perceptual quality comparison (PI/LPIPS) on synthetic noisy RGB images with Gaussian, Poisson and Brown Gaussian noise.**
 
 ![alt text](images/rgb_denoise_pi.png )
@@ -116,3 +117,4 @@ python test.py --model="./checkpoint/model_denoise_unet_n2c50200.pth" --dataset=
 **Visual comparison on a real-world raw depth image captured by a commercial ToF camera. The RGB image is only used as a reference of the scene, which is not aligned with the depth image. “OT denoising” denotes our model trained on synthetic depth images with Gaussian noise.**
 
 ![alt text](images/raw.png )
+
